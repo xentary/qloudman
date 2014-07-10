@@ -1,4 +1,4 @@
-title=PlayStartApp
+title=qloudman
 
 # Default messages
 
