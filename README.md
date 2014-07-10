@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PlayStartApp
 
 This is a sample application using Play Framework (See tags https://github.com/yesnault/PlayStartApp/tags for download)
@@ -42,7 +41,4 @@ This is a sample application using Play Framework (See tags https://github.com/y
 
 ## Contact
 Twitter : @yesnault
-=======
-qloudman
-========
->>>>>>> b5fc533d56324d62a23f68cef7b22dec980171fd
+
