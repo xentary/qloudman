@@ -6,6 +6,7 @@
 GET     /                           controllers.Application.index()
 
 GET     /api/register_node/:name    controllers.Api.registerNode(name: String)
+POST    /api/cmd_result             controllers.Api.commandResult()
 
 GET     /dashboard                  controllers.Dashboard.index()
 

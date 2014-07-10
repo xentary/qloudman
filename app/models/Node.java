@@ -1,5 +1,6 @@
 package models;
 
+import org.joda.time.DateTime;
 import play.db.ebean.Model;
 
 import javax.persistence.Entity;
@@ -17,6 +18,7 @@ public class Node extends Model {
 
     public String name;
 
+    public DateTime lastActivity;
 
     public static Finder<Long, Node> find = new Finder<Long, Node>(Long.class, Node.class);
 
