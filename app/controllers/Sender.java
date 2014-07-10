@@ -3,6 +3,7 @@ package controllers;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import org.apache.commons.lang3.StringUtils;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -22,7 +23,10 @@ public class Sender extends Controller {
         Channel channel = connection.createChannel();
 
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        String message = "system-update";
+        String message = "self-update";
+        if (StringUtils.equalsIgnoreCase(command, "update")) {
+            message = "system-update";
+        }
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
         System.out.println(" [x] Sent '" + message + "' to " + QUEUE_NAME);
 
