@@ -1,11 +1,9 @@
 @(user: User)(nodes: List[models.Node])
 
 @main(user) {
-
-    DASHBOARD Example
-<br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br />
     @for(node<-nodes){
-        @node.name [<a href="sender/@node.name/update">Sysup</a>] [<a href="sender/@node.name/self">self sup</a>]<br />
+        @node.name [<a href="sender/@node.name/update">Sysup</a>] [<a href="sender/@node.name/self">self up</a>]<br />
     }
 
 }

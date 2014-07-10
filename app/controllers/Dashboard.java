@@ -17,7 +17,7 @@ import java.util.List;
 public class Dashboard extends Controller {
 
     public static Result index() {
-        List<Node> nodes = Node.find.all();
+        List<Node> nodes = Node.findAll();
         User user = User.findByEmail(request().username());
 
         return ok(index.render(user, nodes));

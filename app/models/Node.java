@@ -4,6 +4,7 @@ import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.List;
 
 /**
  * Created by ab on 10/07/14.
@@ -21,5 +22,9 @@ public class Node extends Model {
 
     public static Node findByName(String name) {
         return find.where().eq("name", name).findUnique();
+    }
+
+    public static List<Node> findAll() {
+        return find.order("name").findList();
     }
 }
