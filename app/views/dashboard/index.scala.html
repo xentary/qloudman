@@ -1,0 +1,11 @@
+@(user: User)(nodes: List[models.Node])
+
+@main(user) {
+
+    DASHBOARD Example
+
+    @for(node<-nodes){
+        <a href="sender/@node.name/update">@node.name</a>
+    }
+
+}
